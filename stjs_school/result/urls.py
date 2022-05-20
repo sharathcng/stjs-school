@@ -8,5 +8,6 @@ urlpatterns = [
     path('result-view-page', views.resultView, name='resultView'),
     path('sslc-results',views.sslcResultPage, name='sslc-results'),
     path('sslc-results-statistics',views.sslcResultStats, name='sslc-results-stats'),
+    path('download-poster',views.downloadPoster,name='download-poster'),
 
 ]

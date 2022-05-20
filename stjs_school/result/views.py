@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import FileResponse
 
 from result.models import Result
 
@@ -19,3 +20,6 @@ def sslcResultPage(request):
 
 def sslcResultStats(request):
     return render(request, "user-view/results/resultStats.html")
+
+def downloadPoster(request):
+    return FileResponse(open('templates/user-view/results/sslc-2022.pdf', 'rb'), content_type='application/pdf')
