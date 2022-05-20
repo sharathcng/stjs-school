@@ -1,0 +1,226 @@
+{% extends "user-view/base.html" %}
+{% load static %}
+
+{% block body %}
+
+
+<style>
+    .blink {
+        animation: blink-animation 0.5s steps(5, start) infinite;
+        -webkit-animation: blink-animation 0.5s steps(5, start) infinite;
+        color: black;
+    }
+
+    @keyframes blink-animation {
+        to {
+            visibility: hidden;
+        }
+    }
+
+    @-webkit-keyframes blink-animation {
+        to {
+            visibility: hidden;
+        }
+    }
+</style>
+
+
+<!-- Header -->
+<header class="bg-primary text-center py-3 mb-2">
+    <div class="container">
+        <h1 class="fw-light text-white">SSLC Results (2021-2022)</h1>
+        <h3 class="fw-light text-white">Congratulations to all the Achievers</h3>
+        <a href="{% url 'sslc-results-stats' %}" class="blink fw-bold"><u>Click here to see
+            the statistics *</u></a>
+    </div>
+</header>
+
+<div class="container bg-light border border-dark rounded p-5 mb-3">
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Team Member 1 -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="{% static 'img/sslcResults/2022/jayashree.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-0">Jayashree C V</h4>
+                        <div class="card-text text-black h5 fw-bold">610/625 (97.60%)</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="{% static 'img/sslcResults/2022/bindu.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-0">Bindu K M</h4>
+                        <div class="card-text text-black h5 fw-bold">607/625 (97.12%)</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="{% static 'img/sslcResults/2022/Manya.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-0">Manya B C</h4>
+                        <div class="card-text text-black h5 fw-bold">606/625 (96.96%)</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 4 -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="{% static 'img/sslcResults/2022/Niharika.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-0">Niharika R</h4>
+                        <div class="card-text text-black h5 fw-bold">604/625 (96.64%)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Team Member 1 -->
+            <div class="col-xl-2 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="{% static 'img/sslcResults/2022/manoj.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-0">Manoj H J</h4>
+                        <div class="card-text text-black h5 fw-bold">601/625 (96.16%)</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="col-xl-2 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="{% static 'img/sslcResults/2022/Bhanu B A.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-0">Bhanu B A</h4>
+                        <div class="card-text text-black h5 fw-bold">599/625 (95.84%)</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="col-xl-2 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="{% static 'img/sslcResults/2022/Tejaiah.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-0">Tejaiah M C</h4>
+                        <div class="card-text text-black h5 fw-bold">597/625 (95.52%)</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 4 -->
+            <div class="col-xl-2 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="{% static 'img/sslcResults/2022/Pragathi BK.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-0">Pragathi B K</h4>
+                        <div class="card-text text-black h5 fw-bold">596/625 (95.36%)</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 4 -->
+            <div class="col-xl-2 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="{% static 'img/sslcResults/2022/yashaswini.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-0">Yashaswini B D</h4>
+                        <div class="card-text text-black h5 fw-bold">596/625 (95.36%)</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 4 -->
+            <div class="col-xl-2 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="{% static 'img/sslcResults/2022/Likith R S.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-0">Likhith R S</h4>
+                        <div class="card-text text-black h5 fw-bold">586/625 (93.76%)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Team Member 1 -->
+            <div class="col-xl-2 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="{% static 'img/sslcResults/2022/sahana hr.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-0">Sahana H R</h4>
+                        <div class="card-text text-black h5 fw-bold">583/625 (93.28%)</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="col-xl-2 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="{% static 'img/sslcResults/2022/tejas.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-0">Tejas K R</h4>
+                        <div class="card-text text-black h5 fw-bold">580/625(92.80%)</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="col-xl-2 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="{% static 'img/sslcResults/2022/YashaswiniR.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-0">Yashaswini R</h4>
+                        <div class="card-text text-black h5 fw-bold">577/625 (92.32%)</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 4 -->
+            <div class="col-xl-2 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="{% static 'img/sslcResults/2022/Fariha Shifa.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-0">Fariha Shifa</h4>
+                        <div class="card-text text-black h5 fw-bold">574/625 (91.84%)</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 4 -->
+            <div class="col-xl-2 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="{% static 'img/sslcResults/2022/vanitha.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-0">Vanitha J</h4>
+                        <div class="card-text text-black h5 fw-bold">567/625 (90.72%)</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 4 -->
+            <div class="col-xl-2 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="{% static 'img/sslcResults/2022/Kavitha G R.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-0">Kavitha G R</h4>
+                        <div class="card-text text-black h5 fw-bold">563/625 (90.08%)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+</div>
+
+{% endblock %}

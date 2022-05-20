@@ -1,0 +1,217 @@
+{% extends "user-view/base.html" %}
+{% load static %}
+
+{% block body %}
+
+
+<div class="container bg-light border border-dark rounded pb-5 ps-5 pe-5 mb-3">
+    <h2 class="text-center">Statistics of SSLC Results : 2021-2022</h2>
+    <div class="row mb-4">
+        <!-- Team Member 1 -->
+        <div class="col-xl-6 col-md-6">
+            <canvas id="donut" width="400" height="400" class=" border border-dark rounded"></canvas>
+        </div>
+
+        <div class="col-xl-6 col-md-6">
+            <canvas id="pieChart" width="400" height="400" class=" border border-dark rounded"></canvas>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-xl-6 col-md-6 mb-4">
+            <canvas id="barChart1" width="400" height="400" class=" border border-dark rounded"></canvas>
+        </div>
+
+        <div class="col-xl-6 col-md-6 mb-4">
+            <canvas id="barChart2" width="400" height="400" class=" border border-dark rounded"></canvas>
+        </div>
+
+    </div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+    integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    const ctx = document.getElementById('donut');
+    const myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Distinction', 'First Class', 'Second Class'],
+            datasets: [{
+                label: '# of Votes',
+                data: [26, 26, 1],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'No of Students according to grades'
+                }
+            }
+        }
+    });
+</script>
+
+<script>
+    const ctx2 = document.getElementById('pieChart');
+    const myChart2 = new Chart(ctx2, {
+        type: 'pie',
+        data: {
+            labels: ['90-100%', '80-90%', '70-80%', '60-70%', '50-60%'],
+            datasets: [{
+                label: 'No of students',
+                data: [16, 16, 14, 06, 01],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'No of Students according to percentage'
+                }
+            }
+        }
+    });
+</script>
+
+<script>
+    const ctx1 = document.getElementById('barChart1');
+    const myChart1 = new Chart(ctx1, {
+        type: 'bar',
+        data: {
+            labels: ['Kannada', 'Hindi', 'Science', 'Social Science'],
+            datasets: [{
+                label: 'No of students',
+                data: [2, 4, 1, 5],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(153, 102, 255, 1)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(153, 102, 255, 1)',
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'No of students who got 100/100 - subjectwise'
+                }
+            },
+            scales: {
+                y: {
+                    title: {
+                        display: true,
+                        text: 'No of students'
+                    },
+                    min: 0,
+                    max: 6,
+                    ticks: {
+                        // forces step size to be 50 units
+                        stepSize: 1
+                    }
+                }
+            }
+        }
+    });
+</script>
+
+<script>
+    const ctx3 = document.getElementById('barChart2');
+    const myChart3 = new Chart(ctx3, {
+        type: 'bar',
+        data: {
+            labels: ['English','Mathematics'],
+            datasets: [{
+                label: 'No of students',
+                data: [3,4],
+                backgroundColor: [
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(153, 102, 255, 1)',
+                ],
+                borderColor: [
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(153, 102, 255, 1)',
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'No of students who got 99/100 - subjectwise'
+                },
+            },
+            scales: {
+                y: {
+                    title: {
+                        display: true,
+                        text: 'No of students'
+                    },
+                    min: 0,
+                    max: 6,
+                    ticks: {
+                        // forces step size to be 50 units
+                        stepSize: 1
+                    }
+                }
+            }
+        }
+    });
+</script>
+{% endblock %}

@@ -14,8 +14,8 @@
   <button type="button" class="btn btn-warning px-4" onclick="window.print()">Print</button>
 </div>
 <div class="container border border-dark rounded">
-  <h4 class="text-center text-primary">Sri Taralabalu Central School, Ajjihalli</h4>
-
+  <h4 class="text-center text-primary">Sri Taralabalu Jagadguru English Medium School, Ajjihalli</h4>
+  <h5 class="text-center text-primary">(Primary, Higher Primary and HighSchool)</h5>
   <h4 class="text-center text-danger">Results 2021-2022</h4>
   <hr>
   <div class="row">
@@ -28,7 +28,14 @@
       Name: {{ obj.name }}
     </div>
     <div class="col h5">
-      Class: {{ obj.className }}
+      Class: 
+      {% if obj.className == 11 %}
+      LKG
+      {% elif obj.className == 12 %}
+      UKG
+      {% else %}
+      {{ obj.className }}
+      {% endif %}
     </div>
     <div class="col h5">
       Section: {{ obj.section }}

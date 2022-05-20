@@ -12,3 +12,10 @@ def resultView(request):
         regNumber = request.POST['registerNumber']
         resultObject = Result.objects.filter(userid = regNumber)
         return render(request,'user-view/results/resultPage.html', {'resultObject': resultObject})
+
+
+def sslcResultPage(request):
+    return render(request, "user-view/results/sslcResultPage.html")
+
+def sslcResultStats(request):
+    return render(request, "user-view/results/resultStats.html")
